@@ -7,5 +7,7 @@ executed in shell. Insipred by [`alwaysontop`](https://github.com/swirepe/always
 ## Usage
 source `almostontop.plugin.zsh` file and enjoy!
 
+[![asciicast](https://asciinema.org/a/8rkdwvnp7atjseesp7n74nsyr.png)](https://asciinema.org/a/8rkdwvnp7atjseesp7n74nsyr)
+
 ## Author
 [Sergey Valiev](https://github.com/Valiev)
