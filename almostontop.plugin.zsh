@@ -13,6 +13,7 @@ function almostontop_preexec
   fi
 }
 
+autoload -U add-zsh-hook
 add-zsh-hook preexec almostontop_preexec
 
 function almostontop
