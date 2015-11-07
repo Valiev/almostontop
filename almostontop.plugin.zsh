@@ -13,7 +13,9 @@ function almostontop_preexec
   fi
 }
 
-add-zsh-hook preexec almostontop_preexec
+if [ -f "/usr/share/zsh/functions/Misc/add-zsh-hook" ] ; then
+        autoload -U add-zsh-hook && add-zsh-hook preexec almostontop_preexec
+fi
 
 function almostontop
 {
