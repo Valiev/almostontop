@@ -4,12 +4,16 @@ else
   ALMOSONTOP=true
 fi
 
+if [ "$ALMOSTONTOP_COLOR" = "" ]; then
+  ALMOSTONTOP_COLOR="green"
+fi
+
 function almostontop_preexec
 {
   if [ "x$ALMOSONTOP" = "xtrue" ]; then
     clear
     # print PROMPT and command itself on the top
-    echo "$(print -P $prompt)$fg[green]${(z)1}$reset_color"
+    echo "$(print -P $prompt)$fg[$ALMOSTONTOP_COLOR]${(z)1}$reset_color"
   fi
 }
 
