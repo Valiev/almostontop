@@ -1,3 +1,5 @@
+source "${0:h}/version"
+
 if [ "x$ALMOSONTOP" = "xfalse" ]; then
   # doing nothing here
 else
@@ -59,5 +61,7 @@ Description:
   almostontop clears previous command output every time before new command
   executed in shell. Insipred by 'alwaysontop' plugin for bash:
   https://github.com/swirepe/alwaysontop
+
+Version: $ALMOSTONTOP_VERSION
 EOF
 }
