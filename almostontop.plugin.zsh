@@ -13,7 +13,7 @@ function almostontop_preexec
   if [ "x$ALMOSONTOP" = "xtrue" ]; then
     clear
     # print PROMPT and command itself on the top
-    echo "$(print -P $prompt)$fg[$ALMOSTONTOP_COLOR]${(z)1}$reset_color"
+    print -P "$prompt$fg[$ALMOSTONTOP_COLOR]${(z)1}$reset_color"
   fi
 }
 
