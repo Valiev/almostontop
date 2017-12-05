@@ -3,6 +3,7 @@ almostontop changelog
 
 ## 0.4.0
 * `^X^L` keys to toggle `almostontop`
+* Fix for https://github.com/Valiev/almostontop/issues/4
 
 ## 0.3.0
 * Start with versioning
