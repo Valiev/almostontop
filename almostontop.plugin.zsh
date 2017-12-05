@@ -39,13 +39,24 @@ function almostontop
   fi
 
   if [ "x$arg" = "xtoggle" ]; then
-    if [ "x$ALMOSONTOP" = "xtrue" ]; then
-      almostontop off
-    else
-      almostontop on
-    fi
+    almostontop_toggle
   fi
 }
+
+function almostontop_toggle
+{
+  if [ "x$ALMOSONTOP" = "xtrue" ]; then
+    almostontop off
+  else
+    almostontop on
+  fi
+}
+
+# Create widget so it could be bound with keys
+zle -N almostontop_toggle almostontop_toggle
+
+# "ctrl-X ctrl-L" to toggle almostontop, alike "ctrl-L" to clear screen
+bindkey "^X^L" almostontop_toggle
 
 function almostontop_usage
 {
