@@ -1,6 +1,9 @@
 almostontop changelog
 =====================
 
+## 0.4.0
+* `^X^L` keys to toggle `almostontop`
+
 ## 0.3.0
 * Start with versioning
 
