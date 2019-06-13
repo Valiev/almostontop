@@ -1,6 +1,11 @@
 almostontop changelog
 =====================
 
+## 0.5.0
+* Command will be shown without variables evaluation and/or
+  interpolation, fix for https://github.com/Valiev/almostontop/issues/5
+
+
 ## 0.4.0
 * `^X^L` keys to toggle `almostontop`
 * Fix for https://github.com/Valiev/almostontop/issues/4
