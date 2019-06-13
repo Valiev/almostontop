@@ -13,9 +13,15 @@ fi
 function almostontop_preexec
 {
   if [ "x$ALMOSONTOP" = "xtrue" ]; then
+    # print PROMPT and command itself on the top:
+    # 1. clears screen
     clear -x
-    # print PROMPT and command itself on the top
-    print -P "$prompt$fg[$ALMOSTONTOP_COLOR]${(z)1}$reset_color"
+    # 2. prints zsh prompt and sets output color to $ALMOSTONTOP_COLOR
+    print -n -P "$prompt$fg[$ALMOSTONTOP_COLOR]"
+    # 3. prints command without argument expansion/evaluation
+    print -n "${(z)1}"
+    # 4. resets color
+    print -P "$reset_color"
   fi
 }
 
