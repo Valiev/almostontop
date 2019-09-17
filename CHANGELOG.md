@@ -1,6 +1,10 @@
 almostontop changelog
 =====================
 
+## 0.6.0
+* Changed the way to keep prompt and highlighted text with `zle redisplay`
+* Fix for https://github.com/Valiev/almostontop/issues/6
+
 ## 0.5.0
 * Command will be shown without variables evaluation and/or
   interpolation, fix for https://github.com/Valiev/almostontop/issues/5
