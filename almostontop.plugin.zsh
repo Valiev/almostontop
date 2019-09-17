@@ -10,23 +10,17 @@ if [ "$ALMOSTONTOP_COLOR" = "" ]; then
   ALMOSTONTOP_COLOR="green"
 fi
 
-function almostontop_preexec
-{
+function _accept_line_almostontop {
   if [ "x$ALMOSONTOP" = "xtrue" ]; then
-    # print PROMPT and command itself on the top:
-    # 1. clears screen
-    clear -x
-    # 2. prints zsh prompt and sets output color to $ALMOSTONTOP_COLOR
-    print -n -P "$prompt$fg[$ALMOSTONTOP_COLOR]"
-    # 3. prints command without argument expansion/evaluation
-    print -n "${(z)1}"
-    # 4. resets color
-    print -P "$reset_color"
+    # 1. put cursor to the top of the screen
+    tput cup 0 0
+    # 2. redraw line with prompt and command (with highlighted text as well)
+    zle redisplay
   fi
+  zle .accept-line
 }
 
-autoload -U add-zsh-hook
-add-zsh-hook preexec almostontop_preexec
+zle -N accept-line _accept_line_almostontop
 
 function almostontop
 {
